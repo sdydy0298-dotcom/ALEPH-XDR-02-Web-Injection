@@ -2,9 +2,17 @@
 
 Wazuh 모양의 웹 접근 경보에서 **SQL 주입·스크립트 삽입·경로 탐색·명령 구분자** 공격 징후를 분석하고, MITRE ATT&CK **T1190**에 따라 `block`, `alert`, `record`로 구분하는 독립형 보너스 과제입니다.
 
-[웹사이트에서 실습 결과 확인하기](https://aleph-xdr-02-web-injection.vercel.app)
+[웹사이트에서 실습 결과 확인하기](https://sdy-xdr-02.vercel.app) · [기본 Vercel 도메인](https://aleph-xdr-02-web-injection.vercel.app)
 
 > **시뮬레이션 범위:** 실제 Wazuh 서버, 기존 운영 ZTNA 판정기 또는 실서비스 네트워크 차단 장비는 연결되지 않았습니다. 원본에서 제공하는 **교육용 가상 웹 경보 26건**과 **파일 기반 ZTNA 모의 판정기**로 요구사항의 탐지·알림·임시 거부 흐름을 검증합니다. 사용자 비밀번호·비밀키 등 실제 비밀값은 사용하지 않습니다.
+
+## 최종 제출 및 검증 정보
+
+- **배포 주소:** https://sdy-xdr-02.vercel.app
+- **GitHub 저장소:** https://github.com/sdydy0298-dotcom/ALEPH-XDR-02-Web-Injection
+- **GitHub Actions:** 원본 경보 재생 → 21개 자동 테스트 → 다시 재생 → 웹 빌드 → 결과 파일 일치 검사
+- **개인정보/비밀값:** 수업용 문서 IP 및 가상 계정만 사용, 실제 인증 토큰이나 비밀키 없음
+- 실제 Vercel 배포 상태는 프로젝트의 **Production / READY**를 기준으로 확인합니다.
 
 ## 원본 경보와 판정 결과
 
