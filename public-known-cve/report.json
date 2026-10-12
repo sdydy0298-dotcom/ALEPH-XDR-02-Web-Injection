@@ -129,8 +129,8 @@
     {
       "alertId": "kc-07",
       "action": "block",
-      "confidence": 0.99,
-      "reason": "T1190-Log4Shell-Multi-Surface",
+      "confidence": 0.97,
+      "reason": "T1190-Log4Shell-JNDI-Remote-Lookup",
       "source": "192.0.2.24",
       "level": 12,
       "description": "로그인 요청에 CVE-2021-44228 형태가 그대로 있습니다.",

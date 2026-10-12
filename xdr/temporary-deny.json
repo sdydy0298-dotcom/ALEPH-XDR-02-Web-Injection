@@ -58,7 +58,7 @@
     "action": "deny",
     "source": "192.0.2.24",
     "alertId": "kc-07",
-    "reason": "T1190-Log4Shell-Multi-Surface",
+    "reason": "T1190-Log4Shell-JNDI-Remote-Lookup",
     "createdAt": "2026-10-13T00:00:00.000Z",
     "expiresAt": "2026-10-13T00:15:00.000Z"
   },

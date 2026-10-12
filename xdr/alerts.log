@@ -4,7 +4,7 @@
 {"alertId":"kc-04","action":"block","confidence":0.99,"reason":"T1190-Log4Shell-Multi-Surface","at":"2026-10-13T00:00:00.000Z"}
 {"alertId":"kc-05","action":"block","confidence":0.97,"reason":"T1190-Log4Shell-JNDI-Remote-Lookup","at":"2026-10-13T00:00:00.000Z"}
 {"alertId":"kc-06","action":"block","confidence":0.99,"reason":"T1190-Log4Shell-Multi-Surface","at":"2026-10-13T00:00:00.000Z"}
-{"alertId":"kc-07","action":"block","confidence":0.99,"reason":"T1190-Log4Shell-Multi-Surface","at":"2026-10-13T00:00:00.000Z"}
+{"alertId":"kc-07","action":"block","confidence":0.97,"reason":"T1190-Log4Shell-JNDI-Remote-Lookup","at":"2026-10-13T00:00:00.000Z"}
 {"alertId":"kc-08","action":"block","confidence":0.99,"reason":"T1190-Log4Shell-Multi-Surface","at":"2026-10-13T00:00:00.000Z"}
 {"alertId":"kc-09","action":"alert","confidence":0.56,"reason":"T1190-CVE-Reference-Only","at":"2026-10-13T00:00:00.000Z"}
 {"alertId":"kc-10","action":"alert","confidence":0.56,"reason":"T1190-CVE-Reference-Only","at":"2026-10-13T00:00:00.000Z"}
