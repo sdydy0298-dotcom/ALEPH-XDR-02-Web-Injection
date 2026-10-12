@@ -1,4 +1,4 @@
-name: Verify XDR-02 Web Injection
+name: ALEPH XDR-02 & XDR-03 verification
 on:
   push:
     branches: [main]
@@ -13,14 +13,16 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
-      - name: Replay original Wazuh fixture and generate ZTNA rules
-        run: npm run xdr:run -- web-injection
-      - name: Unit and behavioral tests
+      - name: Independently replay and test both XDR modules
         run: npm test
-      - name: Replay twice to detect non-determinism
-        run: npm run xdr:run -- web-injection
-      - name: Build Vercel static site
-        run: npm run build
-      - name: Confirm committed results match actual generated output
+      - name: Rebuild and verify original XDR-02 dashboard
         run: |
-          git diff --exit-code -- xdr/web-injection/result.json xdr/alerts.log xdr/temporary-deny.json public/report.json public/samples.json public/decide.mjs public/index.html public/app.js public/styles.css
+          npm run xdr:run -- web-injection
+          npm run build
+      - name: Rebuild original-fixture XDR-03 response and demo
+        run: |
+          npm run xdr:run -- known-cve
+          npm run build:known-cve
+      - name: Verify deterministic committed reports and both dashboards
+        run: |
+          git diff --exit-code -- xdr/web-injection/result.json xdr/known-cve/result.json xdr/alerts.log xdr/temporary-deny.json public/report.json public/samples.json public/decide.mjs public/index.html public/app.js public/styles.css public-known-cve
