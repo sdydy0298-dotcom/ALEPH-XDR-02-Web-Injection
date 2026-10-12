@@ -1,0 +1,350 @@
+{
+  "scenario": "web-injection",
+  "schema": "aleph.xdr.result.v1",
+  "generatedAt": "2026-10-12T05:00:00.000Z",
+  "fixtureCount": 26,
+  "counts": {
+    "block": 8,
+    "alert": 9,
+    "record": 9
+  },
+  "normalBlocked": 0,
+  "temporaryDenyRules": [
+    {
+      "id": "xdr-wi-01",
+      "source": "203.0.113.10",
+      "alertId": "wi-01",
+      "expiresAt": "2026-10-12T05:15:00.000Z"
+    },
+    {
+      "id": "xdr-wi-02",
+      "source": "203.0.113.10",
+      "alertId": "wi-02",
+      "expiresAt": "2026-10-12T05:15:00.000Z"
+    },
+    {
+      "id": "xdr-wi-03",
+      "source": "198.51.100.15",
+      "alertId": "wi-03",
+      "expiresAt": "2026-10-12T05:15:00.000Z"
+    },
+    {
+      "id": "xdr-wi-04",
+      "source": "192.0.2.15",
+      "alertId": "wi-04",
+      "expiresAt": "2026-10-12T05:15:00.000Z"
+    },
+    {
+      "id": "xdr-wi-05",
+      "source": "203.0.113.18",
+      "alertId": "wi-05",
+      "expiresAt": "2026-10-12T05:15:00.000Z"
+    },
+    {
+      "id": "xdr-wi-06",
+      "source": "198.51.100.18",
+      "alertId": "wi-06",
+      "expiresAt": "2026-10-12T05:15:00.000Z"
+    },
+    {
+      "id": "xdr-wi-07",
+      "source": "192.0.2.21",
+      "alertId": "wi-07",
+      "expiresAt": "2026-10-12T05:15:00.000Z"
+    },
+    {
+      "id": "xdr-wi-08",
+      "source": "203.0.113.22",
+      "alertId": "wi-08",
+      "expiresAt": "2026-10-12T05:15:00.000Z"
+    }
+  ],
+  "results": [
+    {
+      "alertId": "wi-01",
+      "action": "block",
+      "confidence": 0.96,
+      "reason": "T1190-SQL-Query-Injection",
+      "source": "203.0.113.10",
+      "description": "같은 주소에서 SQL 구문을 이어 붙인 요청이 12번 반복됐습니다.",
+      "level": 12,
+      "attempts": "12",
+      "normal": false
+    },
+    {
+      "alertId": "wi-02",
+      "action": "block",
+      "confidence": 0.96,
+      "reason": "T1190-Script-Injection",
+      "source": "203.0.113.10",
+      "description": "같은 주소에서 스크립트 삽입 표기가 9번 반복됐습니다.",
+      "level": 12,
+      "attempts": "9",
+      "normal": false
+    },
+    {
+      "alertId": "wi-03",
+      "action": "block",
+      "confidence": 0.96,
+      "reason": "T1190-Path-Traversal",
+      "source": "198.51.100.15",
+      "description": "경로를 여러 단계 거슬러 올라가는 표기가 8번 반복됐습니다.",
+      "level": 11,
+      "attempts": "8",
+      "normal": false
+    },
+    {
+      "alertId": "wi-04",
+      "action": "block",
+      "confidence": 0.96,
+      "reason": "T1190-SQL-Query-Injection",
+      "source": "192.0.2.15",
+      "description": "SQL 구문 표기가 한 주소에서 20번 들어왔습니다.",
+      "level": 12,
+      "attempts": "20",
+      "normal": false
+    },
+    {
+      "alertId": "wi-05",
+      "action": "block",
+      "confidence": 0.98,
+      "reason": "T1190-Mixed-Injection",
+      "source": "203.0.113.18",
+      "description": "스크립트 표식과 SQL 표식이 같은 주소에서 번갈아 15번 나왔습니다.",
+      "level": 10,
+      "attempts": "15",
+      "normal": false
+    },
+    {
+      "alertId": "wi-06",
+      "action": "block",
+      "confidence": 0.96,
+      "reason": "T1190-Command-Separator",
+      "source": "198.51.100.18",
+      "description": "명령 구분자 표기가 연속 요청 11번에 있습니다.",
+      "level": 11,
+      "attempts": "11",
+      "normal": false
+    },
+    {
+      "alertId": "wi-07",
+      "action": "block",
+      "confidence": 0.96,
+      "reason": "T1190-Path-Traversal",
+      "source": "192.0.2.21",
+      "description": "경로 이탈 표기가 같은 주소에서 14번 반복됐습니다.",
+      "level": 12,
+      "attempts": "14",
+      "normal": false
+    },
+    {
+      "alertId": "wi-08",
+      "action": "block",
+      "confidence": 0.96,
+      "reason": "T1190-SQL-Query-Injection",
+      "source": "203.0.113.22",
+      "description": "데이터베이스 조회를 이어 붙이는 표기가 10번 반복됐습니다.",
+      "level": 10,
+      "attempts": "10",
+      "normal": false
+    },
+    {
+      "alertId": "wi-09",
+      "action": "alert",
+      "confidence": 0.57,
+      "reason": "T1190-Uncertain-Web-Request",
+      "source": "192.0.2.40",
+      "description": "검색어에 따옴표가 한 번 들어 있습니다. 반복은 없습니다.",
+      "level": 6,
+      "attempts": "1",
+      "normal": false
+    },
+    {
+      "alertId": "wi-10",
+      "action": "alert",
+      "confidence": 0.57,
+      "reason": "T1190-Uncertain-Web-Request",
+      "source": "198.51.100.40",
+      "description": "주소에 select 라는 수업명이 한 번 있습니다.",
+      "level": 5,
+      "attempts": "1",
+      "normal": false
+    },
+    {
+      "alertId": "wi-11",
+      "action": "alert",
+      "confidence": 0.57,
+      "reason": "T1190-Uncertain-Web-Request",
+      "source": "203.0.113.41",
+      "description": "검색어에 스크립트라는 수업 단어가 한 번 있습니다. 삽입 표식은 아닙니다.",
+      "level": 7,
+      "attempts": "1",
+      "normal": false
+    },
+    {
+      "alertId": "wi-12",
+      "action": "alert",
+      "confidence": 0.57,
+      "reason": "T1190-Uncertain-Web-Request",
+      "source": "192.0.2.41",
+      "description": "경로에 up 이 한 번 있습니다. 반복은 없습니다.",
+      "level": 6,
+      "attempts": "1",
+      "normal": false
+    },
+    {
+      "alertId": "wi-13",
+      "action": "alert",
+      "confidence": 0.57,
+      "reason": "T1190-Uncertain-Web-Request",
+      "source": "198.51.100.41",
+      "description": "요청 주소가 평소보다 깁니다. 공격 표기는 없습니다.",
+      "level": 5,
+      "attempts": "1",
+      "normal": false
+    },
+    {
+      "alertId": "wi-14",
+      "action": "alert",
+      "confidence": 0.57,
+      "reason": "T1190-Uncertain-Web-Request",
+      "source": "203.0.113.42",
+      "description": "SQL 이라는 수업 공지 제목을 한 번 조회했습니다.",
+      "level": 7,
+      "attempts": "1",
+      "normal": false
+    },
+    {
+      "alertId": "wi-15",
+      "action": "alert",
+      "confidence": 0.57,
+      "reason": "T1190-Uncertain-Web-Request",
+      "source": "192.0.2.42",
+      "description": "이상한 검색 1건 뒤에 정상 조회가 있습니다.",
+      "level": 6,
+      "attempts": "1",
+      "normal": false
+    },
+    {
+      "alertId": "wi-16",
+      "action": "alert",
+      "confidence": 0.57,
+      "reason": "T1190-Uncertain-Web-Request",
+      "source": "198.51.100.42",
+      "description": "주입처럼 보이는 표기가 1건 있고 반복되지 않았습니다.",
+      "level": 8,
+      "attempts": "1",
+      "normal": false
+    },
+    {
+      "alertId": "wi-17",
+      "action": "alert",
+      "confidence": 0.57,
+      "reason": "T1190-Uncertain-Web-Request",
+      "source": "203.0.113.43",
+      "description": "이름 검색에 구분 문자가 1건 있습니다.",
+      "level": 6,
+      "attempts": "1",
+      "normal": false
+    },
+    {
+      "alertId": "wi-18",
+      "action": "record",
+      "confidence": 0.08,
+      "reason": "T1190: 정상 웹 요청",
+      "source": "192.0.2.70",
+      "description": "자료 목록을 조회했습니다.",
+      "level": 3,
+      "attempts": "–",
+      "normal": true
+    },
+    {
+      "alertId": "wi-19",
+      "action": "record",
+      "confidence": 0.08,
+      "reason": "T1190: 정상 웹 요청",
+      "source": "192.0.2.70",
+      "description": "검색어 user01 로 조회했습니다.",
+      "level": 3,
+      "attempts": "–",
+      "normal": true
+    },
+    {
+      "alertId": "wi-20",
+      "action": "record",
+      "confidence": 0.08,
+      "reason": "T1190: 정상 웹 요청",
+      "source": "198.51.100.70",
+      "description": "정적 화면이 열렸습니다.",
+      "level": 2,
+      "attempts": "–",
+      "normal": true
+    },
+    {
+      "alertId": "wi-21",
+      "action": "record",
+      "confidence": 0.08,
+      "reason": "T1190: 정상 웹 요청",
+      "source": "198.51.100.70",
+      "description": "내 메모 한 건을 조회했습니다.",
+      "level": 3,
+      "attempts": "–",
+      "normal": true
+    },
+    {
+      "alertId": "wi-22",
+      "action": "record",
+      "confidence": 0.08,
+      "reason": "T1190: 정상 웹 요청",
+      "source": "203.0.113.70",
+      "description": "반 공지를 조회했습니다.",
+      "level": 3,
+      "attempts": "–",
+      "normal": true
+    },
+    {
+      "alertId": "wi-23",
+      "action": "record",
+      "confidence": 0.08,
+      "reason": "T1190: 정상 웹 요청",
+      "source": "203.0.113.70",
+      "description": "화면을 새로고침했습니다.",
+      "level": 2,
+      "attempts": "–",
+      "normal": true
+    },
+    {
+      "alertId": "wi-24",
+      "action": "record",
+      "confidence": 0.08,
+      "reason": "T1190: 정상 웹 요청",
+      "source": "192.0.2.71",
+      "description": "검색어 week3 으로 조회했습니다.",
+      "level": 3,
+      "attempts": "–",
+      "normal": true
+    },
+    {
+      "alertId": "wi-25",
+      "action": "record",
+      "confidence": 0.08,
+      "reason": "T1190: 정상 웹 요청",
+      "source": "198.51.100.71",
+      "description": "파일 이름 note-01 을 조회했습니다.",
+      "level": 3,
+      "attempts": "–",
+      "normal": true
+    },
+    {
+      "alertId": "wi-26",
+      "action": "record",
+      "confidence": 0.08,
+      "reason": "T1190: 정상 웹 요청",
+      "source": "203.0.113.71",
+      "description": "로그아웃 화면이 열렸습니다.",
+      "level": 2,
+      "attempts": "–",
+      "normal": true
+    }
+  ]
+}

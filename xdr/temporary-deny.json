@@ -1,1 +1,74 @@
-[]
+[
+  {
+    "id": "xdr-wi-01",
+    "action": "deny",
+    "source": "203.0.113.10",
+    "alertId": "wi-01",
+    "reason": "T1190-SQL-Query-Injection",
+    "createdAt": "2026-10-12T05:00:00.000Z",
+    "expiresAt": "2026-10-12T05:15:00.000Z"
+  },
+  {
+    "id": "xdr-wi-02",
+    "action": "deny",
+    "source": "203.0.113.10",
+    "alertId": "wi-02",
+    "reason": "T1190-Script-Injection",
+    "createdAt": "2026-10-12T05:00:00.000Z",
+    "expiresAt": "2026-10-12T05:15:00.000Z"
+  },
+  {
+    "id": "xdr-wi-03",
+    "action": "deny",
+    "source": "198.51.100.15",
+    "alertId": "wi-03",
+    "reason": "T1190-Path-Traversal",
+    "createdAt": "2026-10-12T05:00:00.000Z",
+    "expiresAt": "2026-10-12T05:15:00.000Z"
+  },
+  {
+    "id": "xdr-wi-04",
+    "action": "deny",
+    "source": "192.0.2.15",
+    "alertId": "wi-04",
+    "reason": "T1190-SQL-Query-Injection",
+    "createdAt": "2026-10-12T05:00:00.000Z",
+    "expiresAt": "2026-10-12T05:15:00.000Z"
+  },
+  {
+    "id": "xdr-wi-05",
+    "action": "deny",
+    "source": "203.0.113.18",
+    "alertId": "wi-05",
+    "reason": "T1190-Mixed-Injection",
+    "createdAt": "2026-10-12T05:00:00.000Z",
+    "expiresAt": "2026-10-12T05:15:00.000Z"
+  },
+  {
+    "id": "xdr-wi-06",
+    "action": "deny",
+    "source": "198.51.100.18",
+    "alertId": "wi-06",
+    "reason": "T1190-Command-Separator",
+    "createdAt": "2026-10-12T05:00:00.000Z",
+    "expiresAt": "2026-10-12T05:15:00.000Z"
+  },
+  {
+    "id": "xdr-wi-07",
+    "action": "deny",
+    "source": "192.0.2.21",
+    "alertId": "wi-07",
+    "reason": "T1190-Path-Traversal",
+    "createdAt": "2026-10-12T05:00:00.000Z",
+    "expiresAt": "2026-10-12T05:15:00.000Z"
+  },
+  {
+    "id": "xdr-wi-08",
+    "action": "deny",
+    "source": "203.0.113.22",
+    "alertId": "wi-08",
+    "reason": "T1190-SQL-Query-Injection",
+    "createdAt": "2026-10-12T05:00:00.000Z",
+    "expiresAt": "2026-10-12T05:15:00.000Z"
+  }
+]
