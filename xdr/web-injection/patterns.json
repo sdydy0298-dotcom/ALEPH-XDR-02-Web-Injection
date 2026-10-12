@@ -1,0 +1,32 @@
+[
+  {
+    "name": "T1190-SQL-Query-Injection",
+    "condition": "요청 인자의 UNION SELECT, SQL 항등 비교·시간 지연·연속 쿼리 또는 Wazuh 규칙 설명의 SQL 구문 삽입 증거. 동일 출발 주소에서 짧은 기간 다수(8회 이상)의 명확한 시도와 높은 규칙 수준(10 이상)인 경우만 block.",
+    "evidence": "MITRE ATT&CK T1190: 외부에 공개된 웹 애플리케이션의 SQL 주입 취약점 악용 신호."
+  },
+  {
+    "name": "T1190-Script-Injection",
+    "condition": "요청 인자의 <script>, 이벤트 핸들러, javascript: 또는 Wazuh의 스크립트 삽입 표식. 반복·출발 주소·높은 규칙 수준이 확인되면 block, 단발성은 alert.",
+    "evidence": "MITRE ATT&CK T1190: 외부 웹 입력을 통한 악성 스크립트 주입 신호."
+  },
+  {
+    "name": "T1190-Path-Traversal",
+    "condition": "요청 경로의 ../ 또는 ..\\ 반복과 Wazuh의 상위 경로 거슬러 올라가기/경로 이탈 표식. 반복된 명확한 시도만 block.",
+    "evidence": "MITRE ATT&CK T1190: 외부 공개 애플리케이션에서 경로 탐색을 통한 허용 범위 우회 시도."
+  },
+  {
+    "name": "T1190-Command-Separator",
+    "condition": "웹 요청 값의 쉘 명령 구분자(; && ||)와 명령 실행 표식의 결합 또는 명확한 연속 명령 구분자 Wazuh 경보. 강한 반복 증거가 있으면 block.",
+    "evidence": "MITRE ATT&CK T1190: 공개 웹 요청의 명령 구분자 삽입을 이용한 애플리케이션 악용 신호."
+  },
+  {
+    "name": "T1190-Mixed-Injection",
+    "condition": "동일 출발 주소에서 SQL 주입과 스크립트 삽입 등 복수 유형이 반복적으로 관측된 경우.",
+    "evidence": "MITRE ATT&CK T1190: 서로 다른 웹 주입 시도의 반복은 공개 웹 애플리케이션 악용 신호."
+  },
+  {
+    "name": "T1190-Uncertain-Web-Request",
+    "condition": "MITRE T1190의 단발성·불확실한 요청은 alert만. 수업 단어 select/script/up 등만으로 block하지 않음.",
+    "evidence": "MITRE ATT&CK T1190: 악용 여부가 확정되지 않은 외부 웹 요청은 추가 분석 대상."
+  }
+]

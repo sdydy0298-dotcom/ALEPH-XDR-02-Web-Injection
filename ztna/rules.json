@@ -1,0 +1,11 @@
+{
+  "description": "로컬 ZTNA 실습용 기본 정책. XDR-02는 이 파일을 수정하지 않습니다.",
+  "allow": [
+    {
+      "id": "baseline-allow",
+      "action": "allow",
+      "description": "활성 임시 거부가 없는 테스트 요청 허용"
+    }
+  ],
+  "deny": []
+}
