@@ -4,9 +4,6 @@ import {runXdr} from '../scripts/xdr-run.mjs';
 import {respond} from './web-injection/respond.mjs';
 import {evaluateAccess} from '../ztna/evaluate.mjs';
 
-if(process.argv[2]==='known-cve') {
-  await import('./known-cve/run.mjs');
-} else {
 if(process.argv[2]!=='web-injection'){
   console.error('Usage: npm run xdr:run -- web-injection');
   process.exit(1);
@@ -42,5 +39,3 @@ for(let i=0;i<fixture.alerts.length;i++){
 if(normalBlocked)throw new Error('Normal source denied');
 console.log(JSON.stringify({schema:report.schema,counts:report.counts,normalBlocked,
   alertsLogged:logLines.length,temporaryDenyRules:rules.length,total:fixture.alerts.length}));
-
-}

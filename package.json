@@ -9,8 +9,7 @@
   "scripts": {
     "xdr:run": "node xdr/run.mjs",
     "xdr:judge": "node scripts/xdr-run.mjs",
-    "test": "node scripts/test-all.mjs",
-    "build": "node scripts/build.mjs",
-    "build:known-cve": "node scripts/build-known-cve.mjs"
+    "test": "node --test",
+    "build": "node scripts/build.mjs"
   }
 }
